@@ -1,0 +1,46 @@
+<!--Author: Raymond Mintz
+	contact: rbmintz.linuxadm@gmail.com
+	Written: Jan 21, 2015
+	Version 1.0
+	
+	Notes: This web page can also be accessed at: http://71.254.137.32 #Sorry no DNS record yet
+	
+	 -->
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Mini Assignment</title>
+<script type="text/javascript">
+	var iconString = "What do you want to search GitHub for?";
+	
+	function gotoGitHubURL(redirect){
+		window.location.replace(redirect);
+	}
+	
+	function changeText(){
+		otherString = document.getElementById("userInput").value;
+		myURL = "https://github.com/search?utf8=✓&q="+otherString+"&ref=simplesearch";
+		document.getElementById("ourIcon").src = "https://www2.bc.edu/~sungb/Images/map.png"
+		gotoGitHubURL(myURL);
+	}
+</script>
+<title>Basic HTML</title>
+
+</head>
+<body>
+	<div style="margin-top: 100px; text-align: center">
+		<img id="ourIcon"
+			src="http://www.fancyicons.com/free-icons/131/3d/png/256/magnifying_glass_256.png"
+			style="cursor: pointer" onclick="alert(iconString);" />
+		<p>
+			<strong>Please enter a keyword to search for. 
+	</div>
+
+	<form id="form" onsubmit="return false;">
+		<div style="margin-top: 100px; text-align: center">
+			<input type="text" id="userInput" value="Cuda" />
+			<button type="button" id="theButton" onClick=changeText()>Search</button>
+		</div>
+</body>
+</html>
